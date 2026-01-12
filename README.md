@@ -3,7 +3,7 @@
 #### Description:
 
 Overview
-The Perfume Recommendation Webpage is a Flask-based application designed to help users discover perfumes tailored to their scent preferences, personality traits, and optional gender. By leveraging a SQLite database (fragrance_Internal.db) populated with data scraped from Nosetime (https://www.nosetime.com/), a professional perfume review community, the application matches user inputs to a curated selection of perfumes. It uses a scoring algorithm to rank perfumes based on scent notes, personality attributes, and fragrance types, displaying the top five recommendations with details like brand, name, notes, comments, and images. The project aims to provide an intuitive, user-friendly experience for perfume enthusiasts, combining a robust backend with a clean front-end interface.
+The Perfume Recommendation Webpage is a Flask-based application designed to help users discover perfumes tailored to their scent preferences, personality traits, and optional gender. By leveraging a SQLite database (fragrance_Internal.db) populated with data scraped from Nosetime (https://www.nosetime.com/), a professional perfume review community, the application matches user inputs to a curated selection of perfumes. It uses a scoring algorithm to rank perfumes based on scent notes, personality attributes, and fragrance types, displaying the top five recommendations with details like brand, name, notes, comments, and images. The project aims to provide an intuitive, user-friendly experience for perfume enthusiasts, combining a robust backend with a clean front-end interface. I've deployed it to the cloud, or you can simply click this link to get your personalized fragrance recommendation: https://fragrance-recommender-8khh.onrender.com/
 
 Project Structure and File Descriptions
 The project consists of several key files, each serving a specific purpose:
@@ -27,6 +27,7 @@ o	Alignment with personality attributes and fragrance types (defined in personal
 o	Optional gender filtering to exclude non-matching perfumes.
 4.	Results are sorted by score, and the top five are displayed with images and details.
 5.	Users can return to the homepage to try different combinations.
+I've deployed it to the cloud, or you can simply click this link to get your personalized fragrance recommendation: https://fragrance-recommender-8khh.onrender.com/
 
 Design Choices
 Several design decisions shaped the project, with the scoring algorithm being a critical component:
@@ -45,6 +46,8 @@ Setup and Usage
 3.	Images: Add perfume images to static/fragrance_internal_fig/.
 4.	Run: Execute python app.py and visit http://localhost:5000.
 5.	Demo: Select scents (e.g., Citrus), a personality (e.g., Romantic), and optional gender. Submit to view results, then try different inputs.
+I've deployed it to the cloud, or you can simply click this link to get your personalized fragrance recommendation: https://fragrance-recommender-8khh.onrender.com/
+
 
 Future Improvements
 •	Add user authentication for saving preferences.
