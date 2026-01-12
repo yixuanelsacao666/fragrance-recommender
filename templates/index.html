@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragrance Recommend</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Fragrance Recommend Platform</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="/">
+        <h3>Choose the scent you like (multiple choose is OK)：</h3>
+        {% for scent in scent_options %}
+            <input type="checkbox" name="scent_prefs" value="{{ scent }}"> {{ scent }}<br>
+        {% endfor %}
+
+        <h3>Choose your personality：</h3>
+        <select name="personality">
+            {% for personality in personality_options %}
+                <option value="{{ personality }}">{{ personality }}</option>
+            {% endfor %}
+        </select>
+
+        <h3>Choose the gender of fragrance you prefer：</h3>
+        <input type="radio" name="gender" value="男香"> Male 男香
+        <input type="radio" name="gender" value="女香"> Female 女香
+        <input type="radio" name="gender" value="中性香"> Neutral 中性香
+        <input type="radio" name="gender" value="" checked> Unlimited 无限制
+
+        <br><br>
+        <input type="submit" value="获取推荐">
+    </form>
+</body>
+</html>
